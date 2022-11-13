@@ -10,7 +10,6 @@ This package contains a software representation, or a robot module, of [UR5e](ht
 ## Build instructions
 
 ```
-$ cd src
 $ git clone https://github.com/isri-aist/mc_ur5e
 $ cd mc_ur5e
 $ mkdir build
