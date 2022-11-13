@@ -1,0 +1,7 @@
+if(TARGET ur5e)
+  set(ROBOT_MODULE_PARAMS "\"UR5e\"")
+  configure_file("${CMAKE_CURRENT_SOURCE_DIR}/loader.in.cpp" "${CMAKE_CURRENT_BINARY_DIR}/mc_ur5e/loader.cpp")
+  add_executable(loader_ur5e "${CMAKE_CURRENT_BINARY_DIR}/mc_ur5e/loader.cpp")
+  target_link_libraries(loader_ur5e PUBLIC mc_rtc::mc_rbdyn)
+  add_test(NAME loader_ur5e COMMAND loader_ur5e "$<TARGET_FILE_DIR:ur5e>")
+endif()
