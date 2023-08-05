@@ -37,7 +37,6 @@ UR5eRobotModule::UR5eRobotModule() : mc_rbdyn::RobotModule(MC_UR5E_DESCRIPTION_P
       {
         std::string name = file.filename().string();
         name.replace(off, 7, "");
-        mc_rtc::log::info("name:" + name);
         if(name == "upperarm")
         {
           _convexHull["upper_arm_link"] = std::pair<std::string, std::string>("upper_arm_link", file.string());
