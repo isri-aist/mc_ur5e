@@ -9,7 +9,7 @@ namespace
 {
 
 // This is set by CMake, see CMakeLists.txt
-static const std::string MC_UR5E_DESCRIPTION_PATH = "@MC_UR5E_DESCRIPTION_PATH@/share/mc_ur5e_description";
+static const std::string MC_UR5E_DESCRIPTION_PATH = "@MC_UR5E_DESCRIPTION_PATH@";
 
 } // namespace
 

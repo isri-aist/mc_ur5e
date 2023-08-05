@@ -1,5 +1,8 @@
 # Here we find a typical ROS description package, this set the MC_UR5E_DESCRIPTION_PATH CMake variable
 find_description_package(mc_ur5e_description)
+if(EXISTS "${MC_UR5E_DESCRIPTION_PATH}/share/mc_ur5e_description")
+  set(MC_UR5E_DESCRIPTION_PATH "${MC_UR5E_DESCRIPTION_PATH}/share/mc_ur5e_description")
+endif()
 
 # Generate the robot module C++ code using this value
 configure_file(ur5e.in.cpp "${CMAKE_CURRENT_BINARY_DIR}/ur5e.cpp")
